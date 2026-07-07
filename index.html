@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlanMath — Free Health Benefits Calculators</title>
+<meta name="description" content="Free calculators for health insurance decisions: HSA vs FSA, COBRA costs, plan comparisons, Medicare penalties, mid-year switches, and IRMAA surcharges.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+
+  :root {
+    --bg: #F9FAF8;
+    --panel: #FFFFFF;
+    --ink: #14232E;
+    --ink-soft: #4A5A63;
+    --border: #DDE2E1;
+    --hsa: #1F6F5C;
+    --hsa-bg: #E7F2EF;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; }
+
+  header { margin-bottom: 40px; }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
+    line-height: 1.15;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+
+  .sub { color: var(--ink-soft); font-size: 1.08rem; max-width: 58ch; }
+
+  .tools { display: grid; gap: 14px; margin-bottom: 32px; }
+
+  .tool-card {
+    display: block;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.15s ease;
+  }
+
+  .tool-card:hover { border-color: var(--hsa); }
+
+  .tool-card .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--hsa);
+    margin-bottom: 4px;
+  }
+
+  .tool-card .desc { font-size: 0.92rem; color: var(--ink-soft); }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>PlanMath</h1>
+    <p class="sub">Free calculators for the health insurance decisions that actually cost you money. No sign-up, no data collection beyond what's needed to show you an ad.</p>
+  </header>
+
+  <div class="tools">
+    <a class="tool-card" href="/planmath/health-plan-cost-comparison.html">
+      <div class="name">Health Plan Cost Comparison</div>
+      <div class="desc">Compare two plans by total real cost: premium plus deductible, coinsurance, and out-of-pocket max.</div>
+    </a>
+    <a class="tool-card" href="/planmath/hsa-vs-fsa-calculator.html">
+      <div class="name">HSA vs FSA Calculator</div>
+      <div class="desc">See which account actually saves you more based on your expected spending and tax bracket.</div>
+    </a>
+    <a class="tool-card" href="/planmath/cobra-cost-estimator.html">
+      <div class="name">COBRA Cost Estimator</div>
+      <div class="desc">Find out what you'll really pay per month after job loss, including the 2% admin fee.</div>
+    </a>
+    <a class="tool-card" href="/planmath/mid-year-plan-switch-calculator.html">
+      <div class="name">Mid-Year Plan Switch Calculator</div>
+      <div class="desc">Model the cost impact of switching health plans partway through the year.</div>
+    </a>
+    <a class="tool-card" href="/planmath/medicare-part-b-d-penalty-calculator.html">
+      <div class="name">Medicare Part B/D Penalty Calculator</div>
+      <div class="desc">Estimate the late enrollment penalty for missing your Medicare signup window.</div>
+    </a>
+    <a class="tool-card" href="/planmath/irmaa-surcharge-calculator.html">
+      <div class="name">IRMAA Surcharge Calculator</div>
+      <div class="desc">Calculate the income-related Medicare surcharge based on your reported income.</div>
+    </a>
+  </div>
+
+  <footer>
+    <p>These tools provide general estimates and do not constitute insurance, tax, or legal advice. Confirm your specific numbers with your plan administrator or a licensed advisor.</p>
+    <p><a href="/planmath/privacy.html">Privacy policy</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

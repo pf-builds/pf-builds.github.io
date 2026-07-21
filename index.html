@@ -215,28 +215,36 @@
 // requires no layout changes. Deliberately written without specific internal
 // metrics (article counts, percentages, dollar figures) because this page is
 // public and indexed. Those figures belong on targeted resumes, not here.
+// Write `title` fields in Title Case (e.g. "Risk Mitigation Framework").
+// This is the one place on the page that isn't sentence case — nav, section
+// headings, and the footer all are. Everything else in a card (result,
+// body) stays normal sentence case.
 var ITEMS = [
   { cat:"professional", featured:true,
-    title:"AI enablement at Collective Health",
+    title:"AI Enablement at Collective Health",
     result:"Built the AI tooling and agent practice a support organization runs on",
     body:"Shipped a company-wide AI enablement hub plus a set of reusable agents and automations, so the operations org had one consistent way to use AI instead of everyone improvising. Recognized company-wide and picked up as the model for an executive-sponsored AI productivity program.",
     imageLabel:"AI enablement hub" },
   { cat:"professional",
-    title:"Knowledge infrastructure",
+    title:"Knowledge Infrastructure",
     result:"Rebuilt an enterprise knowledge base so AI could actually use it",
     body:"Took thousands of scattered operational articles and gave them a clean domain structure. Without that groundwork, AI retrieval returns bad answers no matter how good the model is." },
   { cat:"professional",
-    title:"Member self-service",
+    title:"Member Self-Service",
     result:"Launched and scaled a member-facing help center from zero",
     body:"Built the company's main member self-service platform, which cut call-center contact volume. Later added Spanish-language content and wired it into the member portal." },
   { cat:"professional",
-    title:"People leadership",
+    title:"People Leadership",
     result:"Led a 15-person organization across four functions",
     body:"Knowledge Management, Service Design, Help Center Content, and Operational Excellence, with four manager-level direct reports. Leader-of-leaders scope, including hiring and coaching managers and keeping delivery steady through reorganizations and leadership changes." },
   { cat:"professional",
-    title:"Knowledge management at Tesla",
-    result:"Moved Tesla's knowledge base off a shared drive",
-    body:"Took wiki-style content living on a shared drive into structured content inside the CRM, then migrated it into Salesforce. Same problem, different company, seven years earlier." },
+    title:"Risk Mitigation Framework",
+    result:"Built a company-wide framework for catching risk before it became a problem",
+    body:"Created and rolled out a formal risk-mitigation framework adopted across the organization, then partnered directly with legal leadership to stand up a new, compliant process under a tight, high-stakes deadline." },
+  { cat:"professional",
+    title:"Executive Workshop Facilitation",
+    result:"Led multi-day, in-person workshops to solve a company's foundational process problems",
+    body:"Brought senior leadership into the room for two or three days at a time: mapping how the work actually happened, surfacing the real breakdowns, and building the fix together instead of writing it up in a deck afterward." },
 
   { cat:"side-business", featured:true, label:"Web Build",
     title:"PlanMath",
@@ -256,7 +264,7 @@ var ITEMS = [
     link:"https://www.amazon.com/dp/B0H5655CHP", linkLabel:"View on Amazon" },
 
   { cat:"physical-build", featured:true, label:"Woodworking",
-    title:"Redwood milling",
+    title:"Redwood Milling",
     result:"Milling backyard redwood into usable lumber",
     body:"Hands-on fabrication work: planning, milling, and processing raw material into something usable, the same sequencing-and-execution instinct applied physically instead of digitally.",
     imageLabel:"milling in progress" }

@@ -78,21 +78,15 @@
   .chip[aria-selected="true"]{background:var(--accent);color:#fff;font-weight:600;border-color:var(--accent)}
 
   .featured-wrap{display:flex;flex-direction:column;gap:18px;margin-bottom:18px}
-  .featured{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}
-  .featured-body{background:var(--card);border:1px solid var(--hair-card);border-radius:12px;
-    padding:36px;display:flex;flex-direction:column;justify-content:space-between;
-    transition:border-color .18s}
-  .featured-body:hover{border-color:rgba(61,125,255,.55)}
+  .featured{background:var(--card);border:1px solid var(--hair-card);border-radius:12px;
+    padding:40px;box-shadow:inset 4px 0 0 var(--accent);transition:border-color .18s}
+  .featured:hover{border-color:rgba(61,125,255,.55)}
   .badge{display:inline-block;font-size:11px;font-weight:600;color:var(--accent-lighter);
     background:rgba(61,125,255,.14);padding:5px 11px;border-radius:6px;margin-bottom:20px}
-  .featured h3{font-family:var(--display);font-weight:600;font-size:clamp(21px,3.2vw,28px);
+  .featured h3{font-family:var(--display);font-weight:600;font-size:clamp(22px,3.4vw,30px);
     line-height:1.12;margin:0 0 10px}
   .featured .result{font-size:16px;color:var(--accent-light);margin-bottom:18px}
   .featured p{font-size:14.5px;line-height:1.6;color:var(--text-muted);margin:0}
-  .slot{background:var(--card);border:1px solid var(--hair-card);border-radius:12px;
-    overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:270px;
-    background-image:repeating-linear-gradient(135deg,#0f1726 0 14px,#131d30 14px 28px)}
-  .slot span{font-family:var(--mono);font-size:11.5px;color:var(--text-dim);letter-spacing:.05em}
 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .card{background:var(--card);border:1px solid var(--hair-card);border-radius:12px;
@@ -130,9 +124,7 @@
     .principles{grid-template-columns:1fr}
     .principle{border-right:none;border-bottom:1px solid var(--hair);padding:28px}
     .principle:last-child{border-bottom:none}
-    .featured{grid-template-columns:1fr}
-    .featured-body{padding:28px}
-    .slot{min-height:180px;order:2}
+    .featured{padding:28px}
     .grid{grid-template-columns:repeat(2,1fr)}
   }
   @media (max-width:640px){
@@ -234,11 +226,11 @@
 // headings, and the footer all are. Everything else in a card (result,
 // body) stays normal sentence case.
 var ITEMS = [
+  // ---------- PROFESSIONAL ----------
   { cat:"professional", featured:true,
     title:"AI Enablement at Collective Health",
     result:"Built the AI tooling and agent practice a support organization runs on",
-    body:"Shipped a company-wide AI enablement hub plus a set of reusable agents and automations, so the operations org had one consistent way to use AI instead of everyone improvising. Recognized company-wide and picked up as the model for an executive-sponsored AI productivity program.",
-    imageLabel:"AI enablement hub" },
+    body:"Shipped a company-wide AI enablement hub plus a set of reusable agents and automations, so the operations org had one consistent way to use AI instead of everyone improvising. Recognized company-wide and picked up as the model for an executive-sponsored AI productivity program." },
   { cat:"professional",
     title:"Knowledge Infrastructure",
     result:"Rebuilt an enterprise knowledge base so AI could actually use it",
@@ -247,6 +239,10 @@ var ITEMS = [
     title:"Member Self-Service",
     result:"Launched and scaled a member-facing help center from zero",
     body:"Built the company's main member self-service platform, which cut call-center contact volume. Later added Spanish-language content and wired it into the member portal." },
+  { cat:"professional",
+    title:"Service Design Practice",
+    result:"Founded a service design function to tackle the hardest operational problems",
+    body:"Stood up a business-process team built on Lean methodology and process mapping, pointed at the messiest cross-functional problems in the business. Building it is what led to my promotion to Senior Manager." },
   { cat:"professional",
     title:"People Leadership",
     result:"Led a 15-person organization across four functions",
@@ -259,13 +255,30 @@ var ITEMS = [
     title:"Executive Workshop Facilitation",
     result:"Led multi-day, in-person workshops to solve a company's foundational process problems",
     body:"Brought senior leadership into the room for two or three days at a time: mapping how the work actually happened, surfacing the real breakdowns, and building the fix together instead of writing it up in a deck afterward." },
+  { cat:"professional",
+    title:"Executive Escalations",
+    result:"Stood up Tesla's executive escalations function from scratch",
+    body:"Built the intake, triage, and reporting process for the customer issues that reached the CEO and executive team, drove each one to its owning group anywhere in the company, then established it as a permanent team and handed it to an outside hire." },
+  { cat:"professional",
+    title:"Systems Implementation & UAT",
+    result:"Owned user acceptance testing across platform migrations",
+    body:"Set the test strategy and plans, stood up and led the testing teams, and validated workflows hands-on as an end-user tester, tracking defects and implementation risks through to resolution before release." },
+  { cat:"professional",
+    title:"Contact Center Launch",
+    result:"Helped launch a new contact center from the ground up",
+    body:"Interviewed hundreds of candidates, built the new-hire and supervisor training, and sized staffing and site needs to projected volume for a brand-new support site." },
 
+  // ---------- SIDE BUSINESS ----------
+  { cat:"side-business", featured:true, label:"Consulting",
+    title:"Independent Consulting",
+    result:"Operations and AI advisory for growing businesses",
+    body:"Available for advisory, project, and fractional engagements: process review, AI opportunity assessment, self-service and support design, and the business documents that go with them.",
+    link:"https://peterfrutchey.com", linkLabel:"Visit site" },
   { cat:"side-business", featured:true, label:"Interactive Explainer",
     title:"PlanPath",
     result:"A scroll-driven explainer of how a health plan actually works",
     body:"Follows one member through one plan year so deductible, coinsurance, and the out-of-pocket max stop being jargon. A running ledger stays locked to the sentence being read, so the numbers on screen never contradict the story. One static page, no backend, built to hold up on a phone.",
-    link:"https://pf-builds.github.io/planpath/", linkLabel:"Open the explainer",
-    imageLabel:"PlanPath scrollytelling" },
+    link:"https://pf-builds.github.io/planpath/", linkLabel:"Open the explainer" },
   { cat:"side-business", label:"Web Build",
     title:"PlanMath",
     result:"Live healthcare calculator site, built solo with AI",
@@ -276,23 +289,22 @@ var ITEMS = [
     result:"Six-calculator EV/auto cluster, live",
     body:"A second full site shipped solo, proving the same build pattern repeatably rather than as a one-off.",
     link:"https://pf-builds.github.io/evmath/", linkLabel:"Visit site" },
+  { cat:"side-business", label:"Web Build",
+    title:"HouseholdMath",
+    result:"Five-calculator personal finance hub, live",
+    body:"A third calculator site shipped solo, verified in Search Console and indexed, extending the same repeatable build pattern across another topic.",
+    link:"https://pf-builds.github.io/householdmath/", linkLabel:"Visit site" },
   { cat:"side-business", label:"Publishing",
     title:"The Backyard Sawmill",
     result:"Published on Amazon Kindle",
     body:"Wrote and published a practical guide to milling your own lumber at home, start to finish: writing, formatting, cover, and listing.",
     link:"https://www.amazon.com/dp/B0H5655CHP", linkLabel:"View on Amazon" },
 
+  // ---------- PHYSICAL BUILD ----------
   { cat:"physical-build", featured:true, label:"Woodworking",
     title:"Redwood Milling",
     result:"Milling backyard redwood into usable lumber",
-    body:"Hands-on fabrication work: planning, milling, and processing raw material into something usable, the same sequencing-and-execution instinct applied physically instead of digitally.",
-    imageLabel:"milling in progress" },
-
-  { cat:"side-business", label:"Web Build",
-    title:"HouseholdMath",
-    result:"Third calculator cluster, live, this one with cross-tool data handoff",
-    body:"Five personal-finance calculators shipped solo on the same proven build pattern, plus a session-based handoff that carries your numbers between tools without an account or a server.",
-    link:"https://pf-builds.github.io/householdmath/", linkLabel:"Visit site" }
+    body:"Hands-on fabrication work: planning, milling, and processing raw material into something usable, the same sequencing-and-execution instinct applied physically instead of digitally." }
 ];
 
 function esc(s){
@@ -324,16 +336,11 @@ function render(cat){
 
   document.getElementById("featured").innerHTML = featured.map(function(i){
     return '<article class="featured">' +
-      '<div class="featured-body">' +
-        '<div>' +
-          '<span class="badge">'+badgeText(i)+'</span>' +
-          '<h3>'+esc(i.title)+'</h3>' +
-          '<div class="result">'+esc(i.result)+'</div>' +
-          '<p>'+esc(i.body)+'</p>' +
-        '</div>' +
-        linkHtml(i) +
-      '</div>' +
-      '<div class="slot"><span>[ '+esc(i.imageLabel||"image")+' ]</span></div>' +
+      '<span class="badge">'+badgeText(i)+'</span>' +
+      '<h3>'+esc(i.title)+'</h3>' +
+      '<div class="result">'+esc(i.result)+'</div>' +
+      '<p>'+esc(i.body)+'</p>' +
+      linkHtml(i) +
     '</article>';
   }).join("");
 
